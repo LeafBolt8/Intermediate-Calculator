@@ -16,6 +16,7 @@ class Program
             Console.WriteLine("Click 3 for the Exponent Calculator");
             Console.WriteLine("Click 4 to Exit"); // Option to exit the program
 
+            Console.Write("Enter input: ");
             int selection = Convert.ToInt32(Console.ReadLine());
             
             
@@ -237,12 +238,14 @@ class Program
 
             else if (selection == 4) // Option to exit the program
             {
+                Console.WriteLine("");
                 Console.WriteLine("Thank you for using the calculator Babye!");
                 break; // THIS BREAK IS BUILT DIFFERENT IT STOPS THE ENTIRE PROGRAM HEHEHEHE (since its not inside the selections) exit the main loop and end the program
             }
 
             else
             {
+                Console.WriteLine("");
                 Console.WriteLine("Did you input right? Lol try again");
             }
         } // end of Main method

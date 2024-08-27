@@ -100,7 +100,7 @@ class Program
                     
                     Console.WriteLine("");
                     Console.WriteLine("Would you like to use the calculator once again?");
-                    Console.WriteLine("Click Y for yes, Click N for no, and Click R to return to the main menu (ONLY ACCEPTING CAPITAL LETTERS!!)");
+                    Console.WriteLine("Click Y for yes, Click N for no (ONLY ACCEPTING CAPITAL LETTERS!!)");
 
                     String response = Console.ReadLine();
 
@@ -114,14 +114,11 @@ class Program
                         Console.WriteLine("Thank you for using the calculator?");
                         repeat = false; // exit the while loop
                     }
-                    else if (response == "R")
-                    {
-                        break; ////CONNECTS TO THE MAIN LOOPER: break(true) IN THE VERY START exit the while loop to return to the main menu
-                    }
                     else
                     {
                         Console.WriteLine("");
                         Console.WriteLine("Did you input right??");
+                    
                         repeat = false; // exit the while loop
                     }
                 } // end of while loop for the calculator
@@ -156,7 +153,7 @@ class Program
 
                     Console.WriteLine("");
                     Console.WriteLine("Would you like to use the calculator once again?");
-                    Console.WriteLine("Click Y for yes, Click N for no, and Click R to return to the main menu (ONLY ACCEPTING CAPITAL LETTERS!!)");
+                    Console.WriteLine("Click Y for yes, Click N for no (ONLY ACCEPTING CAPITAL LETTERS!!)");
 
                     String response1 = Console.ReadLine();
 
@@ -169,10 +166,6 @@ class Program
                         Console.WriteLine("");
                         Console.WriteLine("Thank you for using the calculator?");
                         repeat1 = false; // exit the while loop
-                    }
-                    else if (response1 == "R")
-                    {
-                        break; //CONNECTS TO THE MAIN LOOPER: break(true) IN THE VERY START exit the while loop to return to the main menu
                     }
                     else
                     {
@@ -214,7 +207,7 @@ class Program
 
                     Console.WriteLine("");
                     Console.WriteLine("Would you like to use the calculator once again?");
-                    Console.WriteLine("Click Y for yes, Click N for no, and Click R to return to the main menu (ONLY ACCEPTING CAPITAL LETTERS!!)");
+                    Console.WriteLine("Click Y for yes, Click N for no(ONLY ACCEPTING CAPITAL LETTERS!!)");
 
                     String response2 = Console.ReadLine();
 
@@ -228,10 +221,7 @@ class Program
                         Console.WriteLine("Thank you for using the calculator?");
                         repeat2 = false; // exit the while loop
                     }
-                    else if (response2 == "R")
-                    {
-                        break; //CONNECTS TO THE MAIN LOOPER: break(true) IN THE VERY START exit the while loop to return to the main menu
-                    }
+
                     else
                     {
                         Console.WriteLine("");

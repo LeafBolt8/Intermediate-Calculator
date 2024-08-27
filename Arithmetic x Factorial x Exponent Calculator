@@ -1,0 +1,260 @@
+using System;
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        while (true) // Main loop for the entire program, WILL COVER THE BREAKS INSIDE EACH SELECTION (OR CALCU)
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Welcome on the dual calculator!");
+            Console.WriteLine("This calculator features an Arithmetic Calculator, a Factorial Calculator, and an Exponent Calculator");
+            Console.WriteLine("");
+            Console.WriteLine("In order to start, select which calculator you want to use");
+            Console.WriteLine("Click 1 for the Arithmetic Calculator");
+            Console.WriteLine("Click 2 for the Factorial Calculator");
+            Console.WriteLine("Click 3 for the Exponent Calculator");
+            Console.WriteLine("Click 4 to Exit"); // Option to exit the program
+
+            int selection = Convert.ToInt32(Console.ReadLine());
+            
+            
+            
+            
+
+            if (selection == 1) // start of selection 1
+            {//START OF IF FOR SELECTION 1
+                // START OF ARITHMETIC CALCULATOR
+                bool repeat = true;//LOOPING THE SELECTION PROCESS REFERENCE 1
+
+                while (repeat) // start of while loop for AC
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("ARITHMETIC CALCULATOR");
+                    Console.WriteLine("ENTER NUMBERS ONLY!");
+                    Console.WriteLine("");
+
+                    Console.WriteLine("Enter the 1st Value: ");
+                    float FirstValue = Convert.ToSingle(Console.ReadLine());
+
+                    Console.WriteLine("Enter the 2nd Value: ");
+                    float SecondValue = Convert.ToSingle(Console.ReadLine());
+
+                    Console.WriteLine("");
+
+                    Console.WriteLine("Choose an Operator: ");
+                    Console.WriteLine("Click 1 for Addition +");
+                    Console.WriteLine("Click 2 for Subtraction -");
+                    Console.WriteLine("Click 3 for Multiplication *");
+                    Console.WriteLine("Click 4 for Division /");
+                    Console.WriteLine("Click 5 for the Remainder (Modulo %)");
+                    Console.Write("Enter choice: ");
+                    int Operator = Convert.ToInt32(Console.ReadLine());
+
+                    float Result = 0;
+
+                    if (Operator == 1) // Addition
+                    {
+                        Result = FirstValue + SecondValue;
+                        Console.WriteLine("");
+                        Console.WriteLine("The answer is: " + Result);
+        
+                    }
+                    else if (Operator == 2) // Subtraction
+                    {
+                        Result = FirstValue - SecondValue;
+                        Console.WriteLine("");
+                        Console.WriteLine("The answer is: " + Result);
+                        
+                    }
+                    else if (Operator == 3) // Multiplication
+                    {
+                        Result = FirstValue * SecondValue;
+                        Console.WriteLine("");
+                        Console.WriteLine("The answer is: " + Result);
+                       
+                    }
+                    else if (Operator == 4) // Division
+                    {
+                        Result = FirstValue / SecondValue;
+                        Console.WriteLine("");
+                        Console.WriteLine("The answer is: " + Result);
+                        
+                    }
+                    else if (Operator == 5) // Modulo
+                    {
+                        Result = FirstValue % SecondValue;
+                        Console.WriteLine("");
+                        Console.WriteLine("The answer is: " + Result);
+                        
+                    }
+                    else
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Was that in the choices lol");
+                       
+                        continue;
+                    }
+                    
+                    //USER PROMPT FOR AC
+                    
+                    Console.WriteLine("");
+                    Console.WriteLine("Would you like to use the calculator once again?");
+                    Console.WriteLine("Click Y for yes, Click N for no, and Click R to return to the main menu (ONLY ACCEPTING CAPITAL LETTERS!!)");
+
+                    String response = Console.ReadLine();
+
+                    if (response == "Y")
+                    {
+                        continue; //CONNECTS TO REPEAT continue to the next iteration of the while loop
+                    }
+                    else if (response == "N")
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Thank you for using the calculator?");
+                        repeat = false; // exit the while loop
+                    }
+                    else if (response == "R")
+                    {
+                        break; ////CONNECTS TO THE MAIN LOOPER: break(true) IN THE VERY START exit the while loop to return to the main menu
+                    }
+                    else
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Did you input right??");
+                        repeat = false; // exit the while loop
+                    }
+                } // end of while loop for the calculator
+            } // end of IF for selection 1
+
+
+
+
+
+            else if (selection == 2) // start of selection 2
+            {//start of IF for selection 2
+                // START OF FACTORIAL CALCULATOR
+                Console.WriteLine("");
+                Console.WriteLine("FACTORIAL CALCULATOR");
+                Console.WriteLine("ENTER NUMBERS ONLY!");
+                Console.WriteLine("");
+                    
+                bool repeat1 = true;//LOOPING THE SELECTION PROCESS REFERENCE 1
+
+                while (repeat1) 
+                {// start of while loop for factorial calculator
+                    Console.WriteLine("Enter a value: ");
+                    int input = Convert.ToInt32(Console.ReadLine());
+                    int answer = 1;
+
+                    for (int i = 1; i <= input; i++) // start of for loop for factorial calculation
+                    {
+                        answer *= i;
+                    } // end of for loop
+                    Console.WriteLine("");
+                    Console.WriteLine("The answer of " + input + "! is: " + answer);
+
+                    Console.WriteLine("");
+                    Console.WriteLine("Would you like to use the calculator once again?");
+                    Console.WriteLine("Click Y for yes, Click N for no, and Click R to return to the main menu (ONLY ACCEPTING CAPITAL LETTERS!!)");
+
+                    String response1 = Console.ReadLine();
+
+                    if (response1 == "Y")
+                    {
+                        continue; // CONNECTS TO REPEAT1 continue to the next iteration of the while loop
+                    }
+                    else if (response1 == "N")
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Thank you for using the calculator?");
+                        repeat1 = false; // exit the while loop
+                    }
+                    else if (response1 == "R")
+                    {
+                        break; //CONNECTS TO THE MAIN LOOPER: break(true) IN THE VERY START exit the while loop to return to the main menu
+                    }
+                    else
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Did you input right??");
+                        repeat1 = false; // exit the while loop
+                    }
+                } // end of while loop for factorial calculator
+            } // end of selection 2
+
+
+
+
+
+            else if (selection == 3) // start of selection 3
+            {//START OF IF FOR SELECTION 3
+                // START OF EXPONENT CALCULATOR
+                Console.WriteLine("");
+                Console.WriteLine("EXPONENT CALCULATOR");
+                Console.WriteLine("ENTER NUMBERS ONLY!");
+                Console.WriteLine("");
+                bool repeat2 = true;//LOOPING THE SELECTION PROCESS REFERENCE 1 
+
+                while (repeat2) 
+                {// start of while loop for exponent calculator
+                    Console.WriteLine("Enter the base value: ");
+                    int input2 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter the exponent value: ");
+                    int power1 = Convert.ToInt32(Console.ReadLine());
+
+                    int answer2 = 1;
+
+                    for (int i = 1; i <= power1; i++) // start of for loop for exponent calculation
+                    {
+                        answer2 *= input2;
+                    } // end of for loop
+                    Console.WriteLine("");
+                    Console.WriteLine("The result of " + input2 + " to the power of " + power1 + " is: " + answer2);
+
+                    Console.WriteLine("");
+                    Console.WriteLine("Would you like to use the calculator once again?");
+                    Console.WriteLine("Click Y for yes, Click N for no, and Click R to return to the main menu (ONLY ACCEPTING CAPITAL LETTERS!!)");
+
+                    String response2 = Console.ReadLine();
+
+                    if (response2 == "Y")
+                    {
+                        continue; // continue to the next iteration of the while loop
+                    }
+                    else if (response2 == "N")
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Thank you for using the calculator?");
+                        repeat2 = false; // exit the while loop
+                    }
+                    else if (response2 == "R")
+                    {
+                        break; //CONNECTS TO THE MAIN LOOPER: break(true) IN THE VERY START exit the while loop to return to the main menu
+                    }
+                    else
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Did you input right??");
+                        repeat2 = false; // exit the while loop
+                    }
+                } // end of while loop for exponent calculator
+            } // end of IF for selection 3
+
+
+
+
+
+            else if (selection == 4) // Option to exit the program
+            {
+                Console.WriteLine("Thank you for using the calculator Babye!");
+                break; // THIS BREAK IS BUILT DIFFERENT IT STOPS THE ENTIRE PROGRAM HEHEHEHE (since its not inside the selections) exit the main loop and end the program
+            }
+
+            else
+            {
+                Console.WriteLine("Did you input right? Lol try again");
+            }
+        } // end of Main method
+    } // end of Program class
+}

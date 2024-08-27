@@ -9,14 +9,10 @@ Topics Covered:
 - Break and Continue
 
 Key Points: (Or rather, how do I loop or jump things?)
-- while (true OR a variable assigned as true (to be able to be modified)) { break; (assuming its inside the bracket while dominates) } = stops/jumps to a higher hierarchy outside the bracket.
+- while (true OR a variable assigned as true (to be able to be modified)) { break; (assuming its inside the bracket while dominates) } = stops/jumps to a higher hierarchy outside the bracket. This is the logic behind the break; when the user wants to exit the calculator
 - while { continue (assuming its inside the bracket while dominates) }= loops the program inside the bracket.
+- Repeat = false, makes the while false which stops the loop, break; is also an alternative but was too lazy to change since theyre the same anyway lol.
 - Note that break and continue are always in the if, else if, else when a selection to loop/stop is made from user input.
-
-Break vs. repeat = false:
-- Break will take you elsewhere.
-- Meanwhile setting the while to false will take you back, giving you a chance to try again after a wrong input.
-- E.g. when you have wrong input, break will take you away from to calc and send u to the main menum while = false will stay in the user question.
 
 Structure of each calculator:
 1. If calcu is selected code (selection == user input)
